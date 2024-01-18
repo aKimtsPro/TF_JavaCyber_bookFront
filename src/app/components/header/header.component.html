@@ -1,0 +1,18 @@
+<header>
+  <p-menubar [model]="links">
+    <ng-template pTemplate="start">
+      <p>ForumApp</p>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <p-button severity="danger"
+                *ngIf="isConnected; else notConnected"
+                (click)="onLogout()"
+      > logout </p-button>
+      <ng-template #notConnected>
+        <p-button severity="info"
+                  routerLink="auth/login"
+        >login</p-button>
+      </ng-template>
+    </ng-template>
+  </p-menubar>
+</header>

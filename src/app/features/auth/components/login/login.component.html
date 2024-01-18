@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <div class="p-float-label form-input">
+    <input pInputText id="email" formControlName="email"/>
+    <label for="email">Email</label>
+  </div>
+
+  <div class="p-float-label form-input">
+    <p-password [toggleMask]="true"
+                [feedback]="false"
+                formControlName="password"
+    ></p-password>
+    <label for="password">Password</label>
+  </div>
+
+  <p-button label="Submit" type="submit"></p-button>
+
+</form>
